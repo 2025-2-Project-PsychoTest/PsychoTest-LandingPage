@@ -1,0 +1,934 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    padding: 12px 0;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #4285f4;
+}
+
+.logo .dot {
+    color: #ea4335;
+    margin-left: 2px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.login-btn {
+    margin-right: 15px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+}
+
+.register-btn {
+    background-color: #4285f4;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+    padding: 60px 0;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.hero-image {
+    flex: 1;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-tag {
+    color: #4285f4;
+    font-size: 14px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.hero-tag::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #4285f4;
+}
+
+.hero h1 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.hero p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 16px;
+    max-width: 90%;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.primary-btn {
+    background-color: #4285f4;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+}
+
+.primary-btn::after {
+    content: "→";
+    margin-left: 8px;
+}
+
+.secondary-btn {
+    color: #333;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid #ddd;
+}
+
+/* Testimonial Section */
+.testimonial {
+    margin: 60px 0;
+}
+
+.testimonial-card {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.testimonial-content {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-quote {
+    flex: 1;
+}
+
+.testimonial-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.testimonial-text {
+    font-style: italic;
+}
+
+.testimonial-rating {
+    color: #ffdd00;
+    margin-bottom: 10px;
+}
+
+/* Why Choose Section */
+.why-choose {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.why-choose h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.why-choose p {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #666;
+}
+
+/* Features Section */
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.feature-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.feature-card:nth-child(1) .feature-icon {
+    color: #4285f4;
+}
+
+.feature-card:nth-child(2) .feature-icon {
+    color: #34a853;
+}
+
+.feature-card:nth-child(3) .feature-icon {
+    color: #ea4335;
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* How it Works Section */
+.how-it-works {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.how-it-works h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.step {
+    flex: 1;
+    padding: 0 15px;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.step-icon {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background-color: #4285f4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.step-number {
+    position: absolute;
+    top: -5px;
+    right: 50%;
+    transform: translateX(25px);
+    width: 30px;
+    height: 30px;
+    background-color: #ff4081;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.step h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* App Demo Section */
+.app-demo {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.app-demo h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.app-demo .section-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.demo-content {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    gap: 40px;
+}
+
+.demo-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.demo-features {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.demo-features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.feature-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #4285f4;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.demo-btn {
+    align-self: flex-start;
+}
+
+.demo-video {
+    flex: 1;
+}
+
+.video-placeholder {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+}
+
+.play-icon {
+    color: #4285f4;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.play-icon:hover {
+    transform: scale(1.1);
+    color: #2b5cd9;
+}
+
+.video-placeholder p {
+    color: #666;
+    font-size: 14px;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.video-placeholder p:hover {
+    color: #4285f4;
+    font-weight: 500;
+}
+
+/* Responsive design for app demo section */
+@media (max-width: 768px) {
+    .demo-content {
+        flex-direction: column-reverse;
+    }
+
+    .demo-info, .demo-video {
+        width: 100%;
+    }
+
+    .demo-btn {
+        align-self: center;
+    }
+}
+
+/* Evidencias Section */
+.evidencias {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.evidencias h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.evidencias .section-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.evidencias-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+.evidencia-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.evidencia-card {
+    aspect-ratio: 8 / 6; /* Proporción ancho:alto, ajusta según prefieras */
+    height: auto;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.evidencia-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.evidencia-card h3 {
+    margin: 15px 0 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.evidencia-card p {
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+}
+
+.image-placeholder {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    overflow: hidden;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+
+/* Sobre PsychoMetric Section */
+.sobre-psychometric {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.sobre-psychometric h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.sobre-psychometric .section-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.psychometric-content {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    gap: 40px;
+}
+
+.psychometric-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.psychometric-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.psychometric-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.psychometric-card h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #4285f4;
+}
+
+.psychometric-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.psychometric-video {
+    flex: 1;
+}
+
+/* Responsive design for evidencias and sobre-psychometric sections */
+@media (max-width: 992px) {
+    .evidencias-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .evidencias-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .psychometric-content {
+        flex-direction: column-reverse;
+    }
+
+    .psychometric-info, .psychometric-video {
+        width: 100%;
+    }
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.cta-section .section-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cta-text {
+    flex: 1;
+    text-align: left;
+}
+
+.cta-text p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.cta-features {
+    list-style: none;
+}
+
+.cta-features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.cta-features .feature-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #4285f4;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.cta-buttons {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-main-btn {
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-main-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(66, 133, 244, 0.3);
+}
+
+.cta-note {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Responsive design for CTA section */
+@media (max-width: 768px) {
+    .cta-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .cta-text {
+        text-align: center;
+    }
+
+    .cta-features li {
+        justify-content: center;
+    }
+
+    .cta-section h2 {
+        font-size: 28px;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #111827;
+    color: white;
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-brand {
+    flex: 1;
+    max-width: 300px;
+    margin-bottom: 30px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-logo span {
+    color: #4285f4;
+}
+
+.footer-logo .dot {
+    color: #ea4335;
+}
+
+.footer-brand p {
+    color: #aaa;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #4285f4;
+    transform: translateY(-3px);
+}
+
+.footer-links {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-column {
+    margin-bottom: 30px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps {
+        flex-wrap: wrap;
+    }
+
+    .step {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero .container {
+        flex-direction: column;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .step {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-direction: column;
+    }
+}
+
+.hero-image img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.image-modal.active {
+    display: flex;
+}
+
+.image-modal .modal-content {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.3);
+}
+
+.image-modal .close-modal {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10001;
+    transition: color 0.2s;
+}
+
+.image-modal .close-modal:hover {
+    color: #4285f4;
+}
